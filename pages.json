@@ -1,0 +1,46 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "申请"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/approve/approve",
+			"style": {
+				"navigationBarTitleText": "审核"
+			}
+		},
+		{
+			"path": "pages/approve/approve",
+			"style": {
+				"navigationBarTitleText": "审批"
+			}
+		},
+		{
+			"path": "pages/approveList/approveList",
+			"style": {
+				"navigationBarTitleText": "待审核"
+			}
+		},
+		{
+			"path": "pages/approveDetail/approveDetail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "审批",
+		"navigationBarBackgroundColor": "#00b7ee",
+		"backgroundColor": "#f7f7f9"
+	}
+}

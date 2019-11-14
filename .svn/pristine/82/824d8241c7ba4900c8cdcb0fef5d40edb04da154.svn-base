@@ -1,0 +1,79 @@
+<template>
+	<view class="content">
+		<view class="list-item">
+			<view class="item-left">
+				<view class="left-desc"><label>姓名：</label><text>hy</text></view>
+				<view class="left-desc"><label>联系电话：</label><text>32456742145</text></view>
+				<view class="left-desc"><label>申请日期：</label><text>2019-11-7 15:00</text></view>
+			</view>
+			<view class="item-right blue">待审核</view>
+		</view>
+		<view class="list-item">
+			<view class="item-left">
+				<view class="left-desc"><label>姓名：</label><text>hy</text></view>
+				<view class="left-desc"><label>联系电话：</label><text>32456742145</text></view>
+				<view class="left-desc"><label>申请日期：</label><text>2019-11-7 15:00</text></view>
+			</view>
+			<view class="item-right red">未通过</view>
+		</view>		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+           login(){
+			   uni.navigateTo({
+			   	url:''
+			   })
+		   }
+		}
+	}
+</script>
+
+<style lang="less">
+	page{
+		background: #f7f7f9;
+	}
+	.content {
+		font-size:14px;
+		.list-item{
+			display: flex;
+			justify-content: space-between;
+			background:#fff;
+			border-radius:8upx;
+			padding:16upx;
+			margin:40upx 30upx;
+			.item-left{
+				display: flex;
+				flex-direction: column;
+				.left-desc{
+					display: flex;
+					height:40upx;
+					margin-bottom:20upx;
+					label{
+						width: 160upx;
+						display: flex;
+					}
+				}
+			}
+			.item-right{
+				&.red{
+					color: #e51c23;
+				}
+				&.blue{
+					color: #00b7ee;
+				}
+			}
+		}
+        
+	}
+</style>

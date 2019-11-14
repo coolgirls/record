@@ -1,0 +1,123 @@
+<template>
+	<view class="content">
+		<view class="approve-info">
+			<view class="approve-item">
+				<label class="name">姓名</label>
+				<text class="info">HY</text>
+			</view>
+			<view class="approve-item">
+				<label class="name">身份证号</label>
+				<text class="info">135454</text>
+			</view>
+			<view class="approve-item">
+				<label class="name">联系电话</label>
+				<text class="info">2332567</text>
+			</view>
+			<view class="approve-item">
+				<label class="name">银行卡号</label>
+				<text class="info">145454</text>
+			</view>
+			<view class="approve-item">
+				<label class="name">开户银行</label>
+				<text class="info">HY</text>
+			</view>
+			<view class="approve-item">
+				<label class="name">结款金额</label>
+				<text class="info">HY</text>
+			</view>
+			<view class="approve-desc">
+				<label class="name">备注</label>
+				<textarea placeholder="备注" class="desc"></textarea>
+			</view>
+		</view>
+		<view class="approve-btn">
+			<view class="noAgree">不通过</view>
+			<view class="agree" @click="goList">通过</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+           goList(){
+			   uni.navigateTo({
+			   	url:'../approveList/approveList'
+			   })
+		   }
+		}
+	}
+</script>
+
+<style lang="less">
+	.content {
+		font-size:14px;
+		.approve-info{
+			.approve-item{
+				display: flex;
+				border-bottom:1px solid #f0eff5;
+				height:80upx;
+				line-height:80upx;
+				label{
+					width: 35%;
+					display: flex;
+					margin-left: 20px;
+				}
+				text{
+					width: 65%;
+					display: flex;
+				}
+			}
+			.approve-desc{
+				display: flex;
+				label{
+					width: 35%;
+					display: flex;
+					margin-left: 20px;
+					margin-top: 20upx;
+				}
+				.desc{
+					width: 60%;
+					height: 240upx;
+					margin-right: 5%;
+					border: 1px solid #f0eff5;
+					margin-top: 20upx;
+					font-size: 14px;
+					padding-left: 10upx;
+					padding-top: 10upx;
+				}
+			}
+		}
+		.approve-btn{
+			display: flex;
+			margin:100upx 10%;
+			.noAgree{
+				width:45%;
+				text-align: center;
+				height: 70upx;
+				line-height: 70upx;
+				border: 1px solid #00b7ee;
+				color: #00b7ee;
+				border-radius: 8upx;
+				margin-right: 10%;
+			}
+			.agree{
+				width:45%;
+				text-align: center;
+				height: 70upx;
+				line-height: 70upx;
+				border: 1px solid #e51c23;
+				color: #e51c23;
+				border-radius: 8upx;
+			}
+		}
+	}
+</style>
